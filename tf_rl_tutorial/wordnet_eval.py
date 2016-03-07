@@ -110,8 +110,7 @@ if __name__ == '__main__':
     print('Training relationship type count: {}'.format(len(all_train_relationships)))
     
     print()
-    print('Preprocessing to remove instances from train that have a \
-           similar counterpart in val/test...')
+    print('Preprocessing to remove instances from train that have a similar counterpart in val/test...')
     train,val,test = wordnet_preprocess(train, val, test)
     all_train_entities = set(train['head']).union(train['tail'])
     all_train_relationships = set(train['rel'])
